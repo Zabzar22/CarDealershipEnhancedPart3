@@ -1,0 +1,145 @@
+/* Root background and default text color */
+.root, .dark-mode {
+    -fx-base: #23272e;
+    -fx-background-color: #23272e;
+    -fx-text-fill: #e1e1e1;
+}
+
+/* Main panel backgrounds */
+.vbox, .hbox, .pane, .border-pane, .anchor-pane, .grid-pane, .stack-pane {
+    -fx-background-color: #23272e;
+}
+
+/* TableView styling */
+.table-view, .vehicle-table {
+    -fx-background-color: #23272e;
+    -fx-table-cell-border-color: #444;
+    -fx-control-inner-background: #23272e;
+    -fx-text-background-color: #e1e1e1;
+    -fx-text-fill: #e1e1e1;
+}
+
+/* Table header */
+.table-view .column-header-background {
+    -fx-background-color: #292d36;
+}
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: #292d36;
+    -fx-border-color: #444444;
+    -fx-border-width: 0 0 1 0;
+    -fx-text-fill: #e1e1e1;
+}
+
+/* Table rows */
+.table-row-cell {
+    -fx-background-color: #23272e;
+    -fx-text-fill: #e1e1e1;
+}
+.table-row-cell:odd {
+    -fx-background-color: #252a32;
+}
+.table-row-cell:selected {
+    -fx-background-color: #3a3f4b;
+    -fx-text-fill: #fff;
+}
+
+/* ScrollPane and scrollbars */
+.scroll-pane, .inventory-scroll-pane {
+    -fx-background-color: #23272e;
+}
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: #292d36;
+}
+.scroll-bar .thumb {
+    -fx-background-color: #444c5c;
+}
+.scroll-pane .corner {
+    -fx-background-color: transparent;
+}
+
+/* ComboBox and dropdown styling */
+.combo-box, .choice-box {
+    -fx-background-color: #292d36;
+    -fx-border-color: #444c5c;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-text-fill: #e1e1e1;
+}
+.combo-box-popup, .choice-box-popup, .context-menu {
+    -fx-background-color: #23272e;
+    -fx-text-fill: #e1e1e1;
+}
+.combo-box .list-cell, .combo-box-popup .list-cell, .choice-box .list-cell {
+    -fx-background-color: #292d36;
+    -fx-text-fill: #e1e1e1;
+}
+.combo-box .list-cell:hover, .combo-box-popup .list-cell:hover, .choice-box .list-cell:hover {
+    -fx-background-color: #444c5c;
+    -fx-text-fill: #fff;
+}
+
+/* Text fields and prompt text */
+.text-field, .password-field {
+    -fx-background-color: #292d36;
+    -fx-text-fill: #e1e1e1;
+    -fx-prompt-text-fill: #888;
+    -fx-border-color: #444c5c;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: #444c5c;
+    -fx-text-fill: #e1e1e1;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+.button:hover {
+    -fx-background-color: #596072;
+}
+
+/* Dashboard button: always orange with black text */
+.dashboard-button {
+    -fx-background-color: #ff9900;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+}
+.dashboard-button:hover {
+    -fx-background-color: #ffb84d;
+}
+
+/* Labels */
+.label {
+    -fx-text-fill: #e1e1e1;
+}
+
+/* Dialogs */
+.dialog-pane {
+    -fx-background-color: #23272e;
+    -fx-text-fill: #e1e1e1;
+}
+
+/* Menus */
+.menu-bar, .menu {
+    -fx-background-color: #292d36;
+    -fx-text-fill: #e1e1e1;
+}
+.menu-item, .menu .label {
+    -fx-background-color: #292d36;
+    -fx-text-fill: #e1e1e1;
+}
+.menu-item:focused, .menu-item:hover {
+    -fx-background-color: #444c5c;
+    -fx-text-fill: #fff;
+}
+
+/* Tooltips */
+.tooltip {
+    -fx-background-color: #292d36;
+    -fx-text-fill: #e1e1e1;
+    -fx-border-color: #444c5c;
+}

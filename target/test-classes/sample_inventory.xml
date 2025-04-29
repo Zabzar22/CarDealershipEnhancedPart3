@@ -1,0 +1,10 @@
+<inventory>
+    <vehicle>
+        <vehicleId>V1</vehicleId>
+        <dealerId>D1</dealerId>
+        <manufacturer>Toyota</manufacturer>
+        <model>RAV4</model>
+        <price>25000</price>
+        <acquisitionDate>2025-04-28</acquisitionDate>
+    </vehicle>
+</inventory>

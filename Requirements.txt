@@ -1,0 +1,77 @@
+Software requirements Project Sprint 2:
+Vehicle Dealership System Requirements
+1. Vehicle Rental Management
+1.1. Users must be able to rent available vehicles by selecting a dealership, vehicle, and providing start/end dates using the rental dialog.
+1.2. Sports cars (Miata, Supra, etc.) are prohibited from being rented per company policy and will be automatically flagged as "NOT RENTABLE" in the interface.
+1.3. The system needs to display the current rental status of each vehicle (AVAILABLE, RENTED, or NOT RENTABLE) in the inventory view.
+1.4. Rented vehicles can be returned through the "Return Vehicle" interface, which will update their status to AVAILABLE.
+1.5. The system must prevent rented vehicles from being transferred between dealerships or removed from inventory until they are returned.
+1.6. Rental information must include start and end dates that are stored with the vehicle data.
+2. Data Persistence
+2.1. The application must save all dealership and vehicle data (including rental status) to inventory.json when any data changes or the program closes.
+2.2. When starting, the application must load the previous state from inventory.json to restore dealerships, vehicles, and their rental status.
+2.3. Vehicle data persistence must include all vehicle attributes: ID, manufacturer, model, price, dealership ID, type, rental status, and acquisition date.
+2.4. The application must maintain vehicle-dealership relationships across sessions, preserving which vehicles belong to which dealerships.
+2.5. The JSON structure must follow the established format with a "car_inventory" array containing vehicle objects with standardized field names.
+3. XML Data Import
+3.1. The system must allow importing vehicle data from the specified XML format as used by the recently acquired dealers.
+3.2. The XML importer must extract dealer names (e.g., "Wacky Bob's Automall") from the XML and associate them with the appropriate dealership ID.
+3.3. When importing XML data, the system must convert prices from pounds to dollars when the unit attribute is "pounds" using a 1.25 conversion rate.
+3.4. The importer must create vehicles of the appropriate type (SUV, Sedan, Pickup, Sports Car) based on the "type" attribute in the XML.
+3.5. The XML import function needs to store dealer names in the vehicle metadata for display in the UI.
+3.6. The system must handle XML parsing errors gracefully and skip problematic entries rather than failing the entire import.
+4. Inventory Transfer
+4.1. Users must be able to transfer non-rented vehicles between dealerships using the transfer dialog interface.
+4.2. The transfer process must update the vehicle's dealership ID to match the target dealership.
+4.3. The system must validate that the target dealership has acquisition enabled before allowing the transfer.
+4.4. When transferring to a new dealership, the system must create the new dealership record with acquisition enabled.
+4.5. The transfer dialog must only display vehicles that are eligible for transfer (not currently rented).
+4.6. After a successful transfer, the inventory display must update to show the vehicle under its new dealership.
+5. Graphical User Interface
+5.1. The application must provide a JavaFX graphical interface with consistent styling and clear visual hierarchy.
+5.2. The main screen must include:
+•	Vehicle input form with fields for all required data
+•	Action buttons for key operations
+•	Search functionality with multiple criteria options
+•	Current inventory display showing all vehicles with their status
+5.3. The system must implement a dashboard showing:
+•	Total vehicle count
+•	Count of rented vehicles
+•	Count of available vehicles
+•	Distribution of vehicles by type (chart)
+•	Distribution of vehicles by dealership
+5.4. The interface must use dedicated dialogs for complex operations: rent, return, transfer, and remove.
+5.5. The application must include a dark mode toggle that changes the color scheme of all UI elements.
+5.6. The interface must provide clear success and error feedback for all operations.
+6. Dealership Management
+6.1. The system must allow enabling and disabling vehicle acquisition for specific dealerships.
+6.2. When acquisition is disabled for a dealership, the system must prevent adding new vehicles to that dealership.
+6.3. The application must maintain both dealership IDs (e.g., "485") and human-readable names (e.g., "Wacky Bob's Automall").
+6.4. The system must allow creating new dealerships when adding vehicles or during transfer operations.
+6.5. The dealership dropdown must be dynamically populated with existing dealership IDs from the current inventory.
+7. Error Handling and Validation
+7.1. The application must validate all user inputs before processing operations:
+•	Required fields must be filled
+•	Price must be a valid positive number
+•	Dates must be in valid format and logical order
+7.2. The system must handle file I/O errors without crashing and display appropriate error messages.
+7.3. The application must prevent users from performing invalid operations:
+•	Renting sports cars
+•	Transferring rented vehicles
+•	Removing rented vehicles
+7.4. Error messages must be specific about the reason for failure and suggest corrective action where possible.
+8. Performance and Reliability
+8.1. The application must load quickly and respond to user interactions without noticeable lag.
+8.2. The search function must filter vehicles in real-time as users type search criteria.
+8.3. The system must handle at least 1000 vehicle records without performance degradation.
+8.4. The application must recover gracefully if inventory or export files are missing or corrupted.
+9. Code Quality and Testing
+9.1. The code must follow a consistent object-oriented structure with clear separation of concerns between UI, business logic, and data access.
+9.2. All classes must include comprehensive JavaDoc documentation explaining their purpose and functionality.
+9.3. Unit tests must cover critical functionality:
+•	Adding/removing vehicles
+•	Renting/returning vehicles
+•	Transferring vehicles
+•	XML import
+•	Data persistence
+

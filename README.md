@@ -1,0 +1,3 @@
+Our application manages multiple car dealerships with inventory tracking, rentals, and vehicle transfers. Some of the key features are support for different vehicle types (SUV, Sedan, Pickup, Sports Car), a rental system with date tracking, XML/JSON import/export capabilities, and a JavaFX GUI with search functionality and a statistics dashboard. Our application allows users to add, remove, and transfer vehicles between dealerships. Users can toggle vehicle acquisition permissions, and also switch between light and dark themes. Data persistence is handled through JSON files, with JUnit tests. 
+
+Team members Nala, Kenan, Ilyas, and Sandip. 

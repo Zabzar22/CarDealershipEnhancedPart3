@@ -1,0 +1,96 @@
+{
+  "car_inventory" : [ {
+    "metadata" : {
+      "dealer_name" : "Valley View Autos"
+    },
+    "price" : 35000.0,
+    "vehicle_model" : "Discovery Sport",
+    "vehicle_type" : "suv",
+    "is_rented" : false,
+    "dealership_id" : "D300",
+    "vehicle_id" : "SUV300",
+    "vehicle_manufacturer" : "Land Rover",
+    "acquisition_date" : 1745457108238
+  }, {
+    "metadata" : {
+      "dealer_name" : "Valley View Autos"
+    },
+    "price" : 38999.0,
+    "vehicle_model" : "Silverado",
+    "vehicle_type" : "pickup",
+    "is_rented" : false,
+    "dealership_id" : "D300",
+    "vehicle_id" : "PIC301",
+    "vehicle_manufacturer" : "Chevrolet",
+    "acquisition_date" : 1745457108238
+  }, {
+    "metadata" : {
+      "dealer_name" : "Luxury Auto Gallery"
+    },
+    "price" : 89500.0,
+    "vehicle_model" : "911 Carrera",
+    "vehicle_type" : "suv",
+    "is_rented" : false,
+    "dealership_id" : "D200",
+    "vehicle_id" : "SPT200",
+    "vehicle_manufacturer" : "Porsche",
+    "acquisition_date" : 1745457108238
+  }, {
+    "metadata" : {
+      "dealer_name" : "Luxury Auto Gallery"
+    },
+    "price" : 62400.0,
+    "vehicle_model" : "5 Series",
+    "vehicle_type" : "sedan",
+    "is_rented" : false,
+    "dealership_id" : "D200",
+    "vehicle_id" : "SED201",
+    "vehicle_manufacturer" : "BMW",
+    "acquisition_date" : 1745457108238
+  }, {
+    "price" : 49889.0,
+    "vehicle_model" : "Supra",
+    "vehicle_type" : "sportscar",
+    "is_rented" : false,
+    "dealership_id" : "77338",
+    "vehicle_id" : "229393",
+    "vehicle_manufacturer" : "Toyota",
+    "acquisition_date" : 1515354694451
+  }, {
+    "rental_end_date" : 1745989200000,
+    "rental_start_date" : 1745902800000,
+    "price" : 20123.0,
+    "vehicle_model" : "Explorer",
+    "vehicle_type" : "suv",
+    "is_rented" : true,
+    "dealership_id" : "12513",
+    "vehicle_id" : "48934j",
+    "vehicle_manufacturer" : "Ford",
+    "acquisition_date" : 1515354694451
+  }, {
+    "price" : 50444.0,
+    "vehicle_model" : "Model 3",
+    "vehicle_type" : "sedan",
+    "is_rented" : false,
+    "dealership_id" : "12513",
+    "vehicle_id" : "83883",
+    "vehicle_manufacturer" : "Tesla",
+    "acquisition_date" : 1515354694451
+  }, {
+    "price" : 70444.0,
+    "vehicle_model" : "Silverado",
+    "vehicle_type" : "pickup",
+    "is_rented" : false,
+    "dealership_id" : "12513",
+    "vehicle_id" : "89343883",
+    "vehicle_manufacturer" : "Chevy",
+    "acquisition_date" : 1515354694451
+  } ],
+  "acquisition_states" : {
+    "D300" : true,
+    "D200" : true,
+    "D100" : false,
+    "77338" : true,
+    "12513" : true
+  }
+}

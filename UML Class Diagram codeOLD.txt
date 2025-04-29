@@ -1,0 +1,113 @@
+classDiagram
+    class Vehicle {
+        <<abstract>>
+        -String vehicleId
+        -String manufacturer
+        -String model
+        -Date acquisitionDate
+        -double price
+        -String dealerId
+        -Map<String, Object> metadata
+        +getVehicleId() String
+        +setVehicleId(String)
+        +getManufacturer() String
+        +setManufacturer(String)
+        +getModel() String
+        +setModel(String)
+        +getAcquisitionDate() Date
+        +setAcquisitionDate(Date)
+        +getPrice() double
+        +setPrice(double)
+        +getDealerId() String
+        +setDealerId(String)
+        +getMetadata() Map
+        +setMetadata(Map)
+        +setMetadata(String, Object)
+    }
+
+    class SUV {
+    }
+
+    class Sedan {
+    }
+
+    class Pickup {
+    }
+
+    class SportsCar {
+    }
+
+    class Dealership {
+        -String dealerId
+        -boolean isAcquisitionEnabled
+        -List<Vehicle> vehicles
+        +Dealership(String)
+        +enableAcquisition()
+        +disableAcquisition()
+        +isAcquisitionEnabled() boolean
+        +addVehicle(Vehicle) boolean
+        +exportToJSON(File)
+        +getVehicles() List
+        +getDealerId() String
+        +showVehicles()
+    }
+
+    class DealershipManager {
+        -Map<String, Dealership> dealerships
+        -JSONFileHandler jsonFileHandler
+        +readInventoryFile(File)
+        +processAddVehicleCommand(String, Vehicle) boolean
+        +addVehicleToInventory(Vehicle, File) boolean
+        +removeVehicleFromInventory(String, String, String, String, double, File) boolean
+        +exportInventoryToExport(File, File) boolean
+        +clearExportFile(File)
+        +enableAcquisition(String) boolean
+        +disableAcquisition(String) boolean
+        +getVehiclesForDisplay() List
+    }
+
+    class JSONFileHandler {
+        -ObjectMapper objectMapper
+        +JSONFileHandler()
+        +readInventory(File) List
+        -inferVehicleType(JsonNode) Vehicle
+        +writeInventory(List, File)
+    }
+
+    class DealershipGUI {
+        -DealershipManager manager
+        -JPanel mainPanel
+        -JTextArea displayArea
+        -JButton addButton
+        -JButton removeButton
+        -JButton enableButton
+        -JButton disableButton
+        -JButton exportButton
+        -JButton clearExportButton
+        +DealershipGUI()
+        -initializeGUI()
+        -createInputPanel() JPanel
+        -createButtonPanel() JPanel
+        -loadInitialInventory()
+        -refreshDisplay()
+        -validateFields() boolean
+        -handleAddVehicle()
+        -handleRemoveVehicle()
+        -createVehicleFromType() Vehicle
+        -handleEnableAcquisition()
+        -handleDisableAcquisition()
+        -handleExportInventory()
+        -handleClearExport()
+        -clearInputFields()
+        -showMessage(String)
+    }
+
+    Vehicle <|-- SUV
+    Vehicle <|-- Sedan
+    Vehicle <|-- Pickup
+    Vehicle <|-- SportsCar
+    
+    DealershipGUI --> DealershipManager
+    DealershipManager --> JSONFileHandler
+    DealershipManager --> Dealership
+    Dealership --> Vehicle

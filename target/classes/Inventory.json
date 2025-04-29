@@ -1,0 +1,94 @@
+{
+  "car_inventory" : [ {
+    "metadata" : {
+      "dealer_name" : "Valley View Autos"
+    },
+    "price" : 35000.0,
+    "vehicle_model" : "Discovery Sport",
+    "vehicle_type" : "suv",
+    "is_rented" : false,
+    "dealership_id" : "D300",
+    "vehicle_id" : "SUV300",
+    "vehicle_manufacturer" : "Land Rover",
+    "acquisition_date" : 1745892976783
+  }, {
+    "metadata" : {
+      "dealer_name" : "Valley View Autos"
+    },
+    "price" : 38999.0,
+    "vehicle_model" : "Silverado",
+    "vehicle_type" : "pickup",
+    "is_rented" : false,
+    "dealership_id" : "D300",
+    "vehicle_id" : "PIC301",
+    "vehicle_manufacturer" : "Chevrolet",
+    "acquisition_date" : 1745892976783
+  }, {
+    "metadata" : {
+      "dealer_name" : "Luxury Auto Gallery"
+    },
+    "price" : 89500.0,
+    "vehicle_model" : "911 Carrera",
+    "vehicle_type" : "sportscar",
+    "is_rented" : false,
+    "dealership_id" : "D200",
+    "vehicle_id" : "SPT200",
+    "vehicle_manufacturer" : "Porsche",
+    "acquisition_date" : 1745892976783
+  }, {
+    "metadata" : {
+      "dealer_name" : "Luxury Auto Gallery"
+    },
+    "price" : 62400.0,
+    "vehicle_model" : "5 Series",
+    "vehicle_type" : "sedan",
+    "is_rented" : false,
+    "dealership_id" : "D200",
+    "vehicle_id" : "SED201",
+    "vehicle_manufacturer" : "BMW",
+    "acquisition_date" : 1745892976783
+  }, {
+    "rental_end_date" : 1745989200000,
+    "metadata" : {
+      "dealer_name" : "Sunshine Motors"
+    },
+    "rental_start_date" : 1745816400000,
+    "price" : 34500.0,
+    "vehicle_model" : "RAV4 Hybrid",
+    "vehicle_type" : "suv",
+    "is_rented" : true,
+    "dealership_id" : "D100",
+    "vehicle_id" : "SUV100",
+    "vehicle_manufacturer" : "Toyota",
+    "acquisition_date" : 1745892976782
+  }, {
+    "metadata" : {
+      "dealer_name" : "Sunshine Motors"
+    },
+    "price" : 26750.0,
+    "vehicle_model" : "Accord",
+    "vehicle_type" : "sedan",
+    "is_rented" : false,
+    "dealership_id" : "D100",
+    "vehicle_id" : "SED101",
+    "vehicle_manufacturer" : "Honda",
+    "acquisition_date" : 1745892976782
+  }, {
+    "metadata" : {
+      "dealer_name" : "Sunshine Motors"
+    },
+    "price" : 42999.0,
+    "vehicle_model" : "F-150",
+    "vehicle_type" : "pickup",
+    "is_rented" : false,
+    "dealership_id" : "D100",
+    "vehicle_id" : "PIC102",
+    "vehicle_manufacturer" : "Ford",
+    "acquisition_date" : 1745892976782
+  } ],
+  "acquisition_states" : {
+    "D300" : true,
+    "D200" : true,
+    "D100" : true
+  }
+}
